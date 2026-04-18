@@ -14,38 +14,38 @@
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
     "db:studio": "drizzle-kit studio",
-    "auth:schema": "better-auth generate --config src/lib/server/auth.ts --output src/lib/server/db/auth.schema.ts --yes",
     "lint": "eslint .",
-    "fix": "eslint . --fix"
+    "fix": "eslint . --fix",
+    "update:deps": "npm update && npm install"
   },
   "dependencies": {
-    "@lucide/svelte": "^1.3.0",
-    "better-sqlite3": "^12.6.2"
+    "@lucide/svelte": "^1.8.0",
+    "better-sqlite3": "^12.9.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^8.0.0",
-    "@better-auth/cli": "~1.4.21",
-    "@sveltejs/adapter-node": "^5.5.2",
-    "@sveltejs/kit": "^2.50.2",
-    "@sveltejs/vite-plugin-svelte": "^6.2.4",
+    "@antfu/eslint-config": "^8.2.0",
+    "@sveltejs/adapter-node": "^5.5.4",
+    "@sveltejs/kit": "^2.57.1",
+    "@sveltejs/vite-plugin-svelte": "^7.0.0",
     "@tailwindcss/typography": "^0.5.19",
-    "@tailwindcss/vite": "^4.1.18",
+    "@tailwindcss/vite": "^4.2.2",
     "@types/better-sqlite3": "^7.6.13",
-    "@types/node": "^24",
-    "better-auth": "~1.4.21",
+    "@types/node": "^25",
+    "@typescript-eslint/eslint-plugin": "^8.58.2",
+    "@typescript-eslint/parser": "^8.58.2",
     "daisyui": "^5.5.19",
-    "drizzle-kit": "^0.31.8",
-    "drizzle-orm": "^0.45.1",
-    "eslint": "^10.2.0",
+    "drizzle-kit": "^0.31.10",
+    "drizzle-orm": "^0.45.2",
+    "eslint": "^10.2.1",
     "eslint-plugin-format": "^2.0.1",
     "eslint-plugin-svelte": "^3.17.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.4.0",
-    "svelte": "^5.54.0",
-    "svelte-check": "^4.4.2",
-    "tailwindcss": "^4.1.18",
-    "typescript": "^5.9.3",
-    "vite": "^7.3.1"
+    "svelte": "^5.55.4",
+    "svelte-check": "^4.4.6",
+    "tailwindcss": "^4.2.2",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.8"
   },
   "lint-staged": {
     "*.{js,ts,svelte}": "eslint --fix"

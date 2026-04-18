@@ -1,42 +1,91 @@
-# sv
+# edavet.org - Digital Invitation Platform
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+A modern, fast, and user-friendly digital invitation platform built with the latest technologies. This project allows users to browse, customize, and order various digital invitations for events like weddings, birthdays, and corporate gatherings.
 
-## Creating a project
+## 🚀 Tech Stack
 
-If you're seeing this, you've probably already done this step. Congrats!
+- **Framework:** [SvelteKit 2](https://kit.svelte.dev/) (with [Svelte 5](https://svelte.dev/))
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **UI & Styling:**
+  - [Tailwind CSS 4](https://tailwindcss.com/)
+  - [DaisyUI 5](https://daisyui.com/) (Modern UI components)
+  - [Lucide Svelte](https://lucide.dev/) (Icon library)
+- **Database & ORM:**
+  - [SQLite](https://sqlite.org/) (via `better-sqlite3`)
+  - [Drizzle ORM](https://orm.drizzle.team/)
+- **Runtime/Adapter:** [Node.js](https://nodejs.org/) (with `@sveltejs/adapter-node`)
 
-```sh
-# create a new project
-npx sv create my-app
-```
+## ✨ Key Features
 
-To recreate this project with the same configuration:
+- **Responsive Design:** Premium UI that works seamlessly across mobile, tablet, and desktop.
+- **Dynamic Categories:** Specialized invitation types for every occasion:
+  - Wedding & Engagement
+  - Birthday Parties
+  - Baby Showers
+  - Concerts & Events
+  - Business & Fair Invitations
+  - Custom "Design Your Own" options
+- **Theme Support:** Native dark/light mode toggle.
+- **Fast Performance:** Server-side rendering (SSR) and optimized assets.
 
-```sh
-# recreate this project
-npx sv@0.13.0 create --template minimal --types ts --add tailwindcss="plugins:typography" sveltekit-adapter="adapter:node" drizzle="database:sqlite+sqlite:better-sqlite3" better-auth="demo:password" --install npm ./
-```
+## 🛠️ Getting Started
 
-## Developing
+### Prerequisites
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+- Node.js (v20 or newer recommended)
+- npm (installed by default with Node.js)
+
+### Installation
+
+1. Clone the repository:
+
+   ```sh
+   git clone https://github.com/your-username/edavet.org.git
+   cd edavet.org
+   ```
+
+2. Install dependencies:
+
+   ```sh
+   npm install
+   ```
+
+3. Setup environment variables:
+   - Copy `.env.example` to `.env`
+   - Configure your variables (e.g., `DATABASE_URL`, `ORIGIN`)
+
+4. Push the database schema:
+   ```sh
+   npm run db:push
+   ```
+
+### Development
+
+Start the development server:
 
 ```sh
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
+### Building for Production
 
-To create a production version of your app:
+To create a production build:
 
 ```sh
 npm run build
 ```
 
-You can preview the production build with `npm run preview`.
+Preview the build:
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+```sh
+npm run preview
+```
+
+## 📂 Project Structure
+
+- `src/lib/`: Reusable components and server utilities.
+  - `src/lib/components/`: UI components (Navbar, Footer, etc.)
+  - `src/lib/server/`: Server-only logic and database configuration.
+- `src/routes/`: Application pages and API routes.
+- `src/app.d.ts`: TypeScript global type definitions.
+- `static/`: Static assets (images, icons, etc.)
