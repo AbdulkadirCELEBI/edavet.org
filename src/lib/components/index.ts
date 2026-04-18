@@ -1,5 +1,6 @@
 export { default as Contact } from './Contact.svelte'
 export { default as CTA } from './CTA.svelte'
+export { default as EventTypes } from './EventTypes.svelte'
 export { default as FAQ } from './FAQ.svelte'
 export { default as Features } from './Features.svelte'
 export { default as Footer } from './Footer.svelte'

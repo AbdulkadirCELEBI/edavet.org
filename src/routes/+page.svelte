@@ -2,6 +2,7 @@
   import {
     Contact,
     CTA,
+    EventTypes,
     FAQ,
     Features,
     Hero,
@@ -14,6 +15,7 @@
 
 <Hero />
 <Features />
+<EventTypes />
 <Stats />
 <Pricing />
 <Testimonials />
