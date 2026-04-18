@@ -1,3 +1,4 @@
+import { env } from '$env/dynamic/private'
 import { db } from '$lib/server/db'
 import * as schema from '$lib/server/db/schema'
 import { betterAuth } from 'better-auth'
@@ -13,6 +14,7 @@ export const auth = betterAuth({
       verification: schema.verification,
     },
   }),
+  baseURL: env.BETTER_AUTH_URL,
   emailAndPassword: {
     enabled: true,
     autoSignIn: true,
