@@ -219,16 +219,16 @@
       <div class='max-h-[60vh] overflow-y-auto w-full'>
         <ul class='menu w-full p-4 gap-2'>
           {#each invitationLinks as link}
-            <li class='flex flex-row p-0 items-stretch bg-base-100 rounded-xl hover:bg-primary/5 transition-colors group relative overflow-hidden'>
-              <a href={link.href} class='grow p-4 text-lg font-medium hover:bg-transparent bg-transparent!'>
-                {link.label}
-              </a>
+            <li class='p-0 bg-base-100 rounded-xl hover:bg-primary/5 transition-colors group relative overflow-hidden'>
               <button
-                class='px-5 opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-primary/20! tooltip tooltip-left flex items-center justify-center z-10'
-                data-tip='Hemen Satın Al'
+                class='w-full flex flex-row items-center justify-between p-4 text-lg font-medium hover:bg-transparent bg-transparent!'
                 onclick={e => addToCartAndCheckout(link, e)}
               >
-                <div class='p-2 bg-primary/10 rounded-full group-hover/btn:bg-primary/20 group-hover/btn:scale-110 transition-all'>
+                <span class='grow text-left'>{link.label}</span>
+                <div
+                  class='p-2 bg-primary/10 rounded-full opacity-0 group-hover:opacity-100 group-hover:bg-primary/20 group-hover:scale-110 transition-all tooltip tooltip-left flex items-center justify-center'
+                  data-tip='Sepete Ekle'
+                >
                   <Gift class='w-5 h-5 text-primary' />
                 </div>
               </button>
