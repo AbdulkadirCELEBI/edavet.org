@@ -2,7 +2,7 @@
   import { page } from '$app/stores'
   import { authClient } from '$lib/auth-client'
   import { cart, clearCartLocal } from '$lib/cart.svelte'
-  import { ChevronDown, Globe, LayoutDashboard, LogOut, MailOpen, Menu, Moon, ShoppingCart, Sun, User } from '@lucide/svelte'
+  import { ChevronDown, ChevronUp, LayoutDashboard, LogOut, MailOpen, Menu, Moon, ShoppingCart, Sun, User } from '@lucide/svelte'
   import { toast } from 'svelte-sonner'
 
   const session = $derived($page.data.session)
@@ -28,6 +28,7 @@
     { code: 'ES', country: 'es', label: 'İspanyolca' },
   ]
 
+  let currentLang = $state(languages[0])
   let isOpen = $state(false)
   let timeoutId: any
   let dropdownRef: HTMLElement
@@ -111,13 +112,25 @@
   <div class='navbar-end gap-1'>
     <!-- Dil Seçeneği -->
     <div class='dropdown dropdown-end'>
-      <div tabindex='0' role='button' class='btn btn-ghost btn-sm btn-circle' aria-label='Dil Seç'>
-        <Globe class='w-5 h-5' />
+      <div tabindex='0' role='button' class='group flex items-center justify-between gap-1.5 px-3 py-1 bg-base-100 hover:bg-base-200 transition-colors rounded-none shadow-xs border-0 cursor-pointer h-9'>
+        <div class='flex items-center gap-2'>
+          <div class='shrink-0 w-6 h-4 overflow-hidden rounded-[2px] shadow-xs'>
+            <img src={`https://flagcdn.com/${currentLang.country}.svg`} alt={`${currentLang.label} bayrağı`} class='w-full h-full object-cover' />
+          </div>
+          <span class='font-bold text-base-content text-base leading-none'>{currentLang.code}</span>
+        </div>
+        <ChevronUp class='w-4 h-4 text-base-content/60 ml-0.5' />
       </div>
-      <ul class='dropdown-content menu z-100 p-2 shadow-xl bg-base-100 rounded-box w-52 border border-base-200 gap-1'>
+      <ul class='dropdown-content menu z-100 p-2 shadow-xl bg-base-100 rounded-box w-52 border border-base-200 gap-1 mt-2'>
         {#each languages as lang}
           <li>
-            <button class='active:bg-primary/10 flex items-center justify-start gap-4 py-3 hover:bg-base-200 transition-colors rounded-lg'>
+            <button
+              class='active:bg-primary/10 flex items-center justify-start gap-4 py-3 hover:bg-base-200 transition-colors rounded-lg w-full text-left'
+              onclick={() => {
+                currentLang = lang
+                ;(document.activeElement as HTMLElement)?.blur()
+              }}
+            >
               <div class='shrink-0 w-6 h-4 overflow-hidden rounded-[2px] shadow-sm border border-base-300'>
                 <img src={`https://flagcdn.com/${lang.country}.svg`} alt={`${lang.label} bayrağı`} class='w-full h-full object-cover' />
               </div>
