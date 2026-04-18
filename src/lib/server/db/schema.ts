@@ -4,57 +4,84 @@ export const user = sqliteTable('user', {
   id: text('id').primaryKey(),
   name: text('name').notNull(),
   email: text('email').notNull().unique(),
-  emailVerified: integer('emailVerified', { mode: 'boolean' }).notNull(),
+  emailVerified: integer('email_verified', { mode: 'boolean' }).notNull(),
   image: text('image'),
-  createdAt: integer('createdAt', { mode: 'timestamp' }).notNull(),
-  updatedAt: integer('updatedAt', { mode: 'timestamp' }).notNull(),
+  createdAt: integer('created_at', { mode: 'timestamp_ms' }).notNull(),
+  updatedAt: integer('updated_at', { mode: 'timestamp_ms' }).notNull(),
 })
 
 export const session = sqliteTable('session', {
   id: text('id').primaryKey(),
-  expiresAt: integer('expiresAt', { mode: 'timestamp' }).notNull(),
+  expiresAt: integer('expires_at', { mode: 'timestamp_ms' }).notNull(),
   token: text('token').notNull().unique(),
-  createdAt: integer('createdAt', { mode: 'timestamp' }).notNull(),
-  updatedAt: integer('updatedAt', { mode: 'timestamp' }).notNull(),
-  ipAddress: text('ipAddress'),
-  userAgent: text('userAgent'),
-  userId: text('userId')
+  createdAt: integer('created_at', { mode: 'timestamp_ms' }).notNull(),
+  updatedAt: integer('updated_at', { mode: 'timestamp_ms' }).notNull(),
+  ipAddress: text('ip_address'),
+  userAgent: text('user_agent'),
+  userId: text('user_id')
     .notNull()
     .references(() => user.id),
 })
 
 export const account = sqliteTable('account', {
   id: text('id').primaryKey(),
-  accountId: text('accountId').notNull(),
-  providerId: text('providerId').notNull(),
-  userId: text('userId')
+  accountId: text('account_id').notNull(),
+  providerId: text('provider_id').notNull(),
+  userId: text('user_id')
     .notNull()
     .references(() => user.id),
-  accessToken: text('accessToken'),
-  refreshToken: text('refreshToken'),
-  idToken: text('idToken'),
-  accessTokenExpiresAt: integer('accessTokenExpiresAt', { mode: 'timestamp' }),
-  refreshTokenExpiresAt: integer('refreshTokenExpiresAt', { mode: 'timestamp' }),
+  accessToken: text('access_token'),
+  refreshToken: text('refresh_token'),
+  idToken: text('id_token'),
+  accessTokenExpiresAt: integer('access_token_expires_at', { mode: 'timestamp_ms' }),
+  refreshTokenExpiresAt: integer('refresh_token_expires_at', { mode: 'timestamp_ms' }),
   scope: text('scope'),
   password: text('password'),
-  createdAt: integer('createdAt', { mode: 'timestamp' }).notNull(),
-  updatedAt: integer('updatedAt', { mode: 'timestamp' }).notNull(),
+  createdAt: integer('created_at', { mode: 'timestamp_ms' }).notNull(),
+  updatedAt: integer('updated_at', { mode: 'timestamp_ms' }).notNull(),
 })
 
 export const verification = sqliteTable('verification', {
   id: text('id').primaryKey(),
   identifier: text('identifier').notNull(),
   value: text('value').notNull(),
-  expiresAt: integer('expiresAt', { mode: 'timestamp' }).notNull(),
-  createdAt: integer('createdAt', { mode: 'timestamp' }),
-  updatedAt: integer('updatedAt', { mode: 'timestamp' }),
+  expiresAt: integer('expires_at', { mode: 'timestamp_ms' }).notNull(),
+  createdAt: integer('created_at', { mode: 'timestamp_ms' }),
+  updatedAt: integer('updated_at', { mode: 'timestamp_ms' }),
 })
 
 export const cartItem = sqliteTable('cart_item', {
   id: text('id').primaryKey(),
-  userId: text('userId')
+  userId: text('user_id')
     .notNull()
     .references(() => user.id),
   label: text('label').notNull(),
-  createdAt: integer('createdAt', { mode: 'timestamp' }).notNull(),
+  createdAt: integer('created_at', { mode: 'timestamp_ms' }).notNull(),
+})
+
+export const invitation = sqliteTable('invitation', {
+  id: text('id').primaryKey(),
+  userId: text('user_id')
+    .notNull()
+    .references(() => user.id, { onDelete: 'cascade' }),
+  slug: text('slug').notNull().unique(),
+  coupleNames: text('couple_names').notNull(),
+  weddingDate: integer('wedding_date', { mode: 'timestamp_ms' }).notNull(),
+  locationName: text('location_name'),
+  locationAddress: text('location_address'),
+  locationUrl: text('location_url'),
+  story: text('story'),
+  howWeMeet: text('how_we_meet'),
+  musicUrl: text('music_url'),
+  createdAt: integer('created_at', { mode: 'timestamp_ms' }).notNull(),
+  theme: text('theme').notNull().default('luxury'),
+  viewCount: integer('view_count').notNull().default(0),
+  isPremium: integer('is_premium', { mode: 'boolean' }).notNull().default(false),
+  settings: text('settings').notNull().default('{}'),
+})
+
+export const task = sqliteTable('task', {
+  id: text('id').primaryKey(),
+  title: text('title').notNull(),
+  priority: integer('priority').notNull().default(1),
 })
