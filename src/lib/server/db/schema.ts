@@ -79,9 +79,3 @@ export const invitation = sqliteTable('invitation', {
   isPremium: integer('is_premium', { mode: 'boolean' }).notNull().default(false),
   settings: text('settings').notNull().default('{}'),
 })
-
-export const task = sqliteTable('task', {
-  id: text('id').primaryKey(),
-  title: text('title').notNull(),
-  priority: integer('priority').notNull().default(1),
-})
