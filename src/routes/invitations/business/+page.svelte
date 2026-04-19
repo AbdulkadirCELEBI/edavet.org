@@ -1,5 +1,5 @@
 <script lang='ts'>
-  import { Briefcase, ChartBar, Shield, Globe, Clock, Users, Award, ChevronRight, Zap } from '@lucide/svelte'
+  import { Award, Briefcase, ChartBar, ChevronRight, Clock, Globe, Shield, Users, Zap } from '@lucide/svelte'
 
   const features = [
     { icon: Shield, title: 'Kurumsal Güvenlik', desc: 'KVKK uyumlu altyapı ile konuk bilgilerini güvenle saklayın.' },
@@ -44,7 +44,7 @@
       <h1 class='text-5xl md:text-7xl font-black mb-6 tracking-tight leading-[1.1] text-white'>
         İşinize
         <br />
-        <span class='bg-gradient-to-r from-blue-400 via-cyan-400 to-violet-400 bg-clip-text text-transparent italic'>
+        <span class='bg-linear-to-r from-blue-400 via-cyan-400 to-violet-400 bg-clip-text text-transparent italic'>
           Prestij Katın
         </span>
       </h1>
@@ -54,7 +54,7 @@
       </p>
 
       <div class='flex flex-col sm:flex-row gap-4 justify-center'>
-        <a href='/order' class='btn btn-lg bg-gradient-to-r from-blue-500 to-violet-500 border-0 text-white shadow-xl shadow-blue-500/20 hover:shadow-blue-500/40 hover:scale-105 transition-all px-10'>
+        <a href='/order' class='btn btn-lg bg-linear-to-r from-blue-500 to-violet-500 border-0 text-white shadow-xl shadow-blue-500/20 hover:shadow-blue-500/40 hover:scale-105 transition-all px-10'>
           <Zap class='w-5 h-5' />
           Kurumsal Teklif Al
         </a>
@@ -88,8 +88,8 @@
       <p class='text-gray-400 text-lg max-w-xl mx-auto font-medium'>Kurumsal kimliğinizle uyumlu şık davetiyeler.</p>
     </div>
     <div class='max-w-lg mx-auto'>
-      <div class='card bg-gradient-to-b from-gray-900 to-gray-950 shadow-2xl border border-white/10 overflow-hidden'>
-        <div class='h-1 bg-gradient-to-r from-blue-500 via-cyan-500 to-violet-500'></div>
+      <div class='card bg-linear-to-b from-gray-900 to-gray-950 shadow-2xl border border-white/10 overflow-hidden'>
+        <div class='h-1 bg-linear-to-r from-blue-500 via-cyan-500 to-violet-500'></div>
         <div class='card-body items-center text-center p-10'>
           <div class='w-16 h-16 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-4'>
             <Briefcase class='w-8 h-8 text-blue-400' />
@@ -166,7 +166,7 @@
 </section>
 
 <!-- CTA -->
-<section class='py-24 bg-gradient-to-r from-blue-600 via-blue-500 to-violet-600 text-white relative overflow-hidden'>
+<section class='py-24 bg-linear-to-r from-blue-600 via-blue-500 to-violet-600 text-white relative overflow-hidden'>
   <div class='absolute inset-0'>
     <div class='absolute top-[-20%] left-[10%] w-[30%] h-[60%] bg-white/5 rounded-full blur-3xl'></div>
     <div class='absolute bottom-[-20%] right-[10%] w-[30%] h-[60%] bg-white/5 rounded-full blur-3xl'></div>

@@ -1,5 +1,5 @@
 <script lang='ts'>
-  import { PartyPopper, Gift, Cake, Camera, Music, Users, Star, ChevronRight, Sparkles } from '@lucide/svelte'
+  import { Cake, Camera, ChevronRight, Gift, Music, PartyPopper, Sparkles, Users } from '@lucide/svelte'
 
   const features = [
     { icon: Cake, title: 'Yaş Temalı Tasarımlar', desc: '1 yaş, 18 yaş, 30 yaş — her yaşa özel eğlenceli ve renkli şablonlar.' },
@@ -25,7 +25,7 @@
 
 <!-- Hero - Eğlenceli Tema -->
 <section class='relative min-h-[90vh] flex items-center overflow-hidden'>
-  <div class='absolute inset-0 bg-gradient-to-br from-violet-50 via-pink-50 to-amber-50 dark:from-base-300 dark:via-base-200 dark:to-base-300'></div>
+  <div class='absolute inset-0 bg-linear-to-br from-violet-50 via-pink-50 to-amber-50 dark:from-base-300 dark:via-base-200 dark:to-base-300'></div>
   <div class='absolute inset-0 z-0'>
     <div class='absolute top-[-10%] left-[-5%] w-[35%] h-[45%] bg-violet-200/30 dark:bg-violet-900/10 rounded-full blur-3xl'></div>
     <div class='absolute bottom-[-10%] right-[-5%] w-[35%] h-[45%] bg-amber-200/30 dark:bg-amber-900/10 rounded-full blur-3xl'></div>
@@ -50,7 +50,7 @@
       <h1 class='text-5xl md:text-7xl font-black mb-6 tracking-tight leading-[1.1]'>
         Partiye Hazır Mısın?
         <br />
-        <span class='bg-gradient-to-r from-violet-500 via-pink-500 to-amber-500 bg-clip-text text-transparent italic'>
+        <span class='bg-linear-to-r from-violet-500 via-pink-500 to-amber-500 bg-clip-text text-transparent italic'>
           Kutlama Başlıyor! 🎉
         </span>
       </h1>
@@ -60,7 +60,7 @@
       </p>
 
       <div class='flex flex-col sm:flex-row gap-4 justify-center'>
-        <a href='/order' class='btn btn-lg bg-gradient-to-r from-violet-500 to-pink-500 border-0 text-white shadow-xl shadow-violet-500/25 hover:shadow-violet-500/40 hover:scale-105 transition-all px-10'>
+        <a href='/order' class='btn btn-lg bg-linear-to-r from-violet-500 to-pink-500 border-0 text-white shadow-xl shadow-violet-500/25 hover:shadow-violet-500/40 hover:scale-105 transition-all px-10'>
           <Sparkles class='w-5 h-5' />
           Parti Davetiyeni Yap
         </a>
@@ -80,14 +80,14 @@
       <h2 class='text-4xl md:text-5xl font-black mb-4 tracking-tight'>Davetiyeniz Böyle <span class='text-violet-500'>Parlayacak</span></h2>
     </div>
     <div class='max-w-lg mx-auto'>
-      <div class='card bg-gradient-to-b from-violet-50 to-pink-50 dark:from-base-200 dark:to-base-300 shadow-2xl border border-violet-100 dark:border-base-content/10 overflow-hidden'>
-        <div class='h-2 bg-gradient-to-r from-violet-400 via-pink-400 to-amber-400'></div>
+      <div class='card bg-linear-to-b from-violet-50 to-pink-50 dark:from-base-200 dark:to-base-300 shadow-2xl border border-violet-100 dark:border-base-content/10 overflow-hidden'>
+        <div class='h-2 bg-linear-to-r from-violet-400 via-pink-400 to-amber-400'></div>
         <div class='card-body items-center text-center p-10'>
           <div class='text-6xl mb-2'>🎂</div>
           <p class='text-violet-500 font-semibold tracking-widest text-sm uppercase'>Doğum Günüme Davetlisiniz!</p>
           <div class='divider divider-neutral/10 my-2'></div>
           <h3 class='text-4xl font-black text-violet-600 dark:text-violet-400'>Zeynep</h3>
-          <div class='badge badge-lg bg-gradient-to-r from-violet-500 to-pink-500 text-white border-0 text-lg font-black px-6 py-4 my-2'>5 Yaşında! 🎈</div>
+          <div class='badge badge-lg bg-linear-to-r from-violet-500 to-pink-500 text-white border-0 text-lg font-black px-6 py-4 my-2'>5 Yaşında! 🎈</div>
           <p class='text-base-content/50 font-medium mt-2'>22 Ağustos 2026 — Cumartesi, 14:00</p>
           <p class='text-base-content/40 text-sm font-medium'>Eğlence Bahçesi, Ankara</p>
           <div class='flex gap-3 mt-8'>
@@ -143,7 +143,7 @@
 </section>
 
 <!-- CTA -->
-<section class='py-24 bg-gradient-to-r from-violet-500 via-pink-500 to-amber-500 text-white relative overflow-hidden'>
+<section class='py-24 bg-linear-to-r from-violet-500 via-pink-500 to-amber-500 text-white relative overflow-hidden'>
   <div class='absolute inset-0'>
     <div class='absolute top-[-20%] left-[10%] w-[30%] h-[60%] bg-white/5 rounded-full blur-3xl'></div>
     <div class='absolute bottom-[-20%] right-[10%] w-[30%] h-[60%] bg-white/5 rounded-full blur-3xl'></div>

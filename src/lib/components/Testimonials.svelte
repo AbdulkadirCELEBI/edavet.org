@@ -1,5 +1,5 @@
 <script lang='ts'>
-  import { Star, Quote } from '@lucide/svelte'
+  import { Quote, Star } from '@lucide/svelte'
 
   const testimonials = [
     {
@@ -93,7 +93,7 @@
                 <div class='text-base-content/50 text-xs font-medium'>{testimonial.role}</div>
               </div>
               <div class='ml-auto flex gap-0.5'>
-                {#each Array(testimonial.rating) as _}
+                {#each Array.from({ length: testimonial.rating }) as _}
                   <Star class='w-4 h-4 text-warning fill-warning' />
                 {/each}
               </div>

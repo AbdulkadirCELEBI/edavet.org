@@ -1,5 +1,5 @@
 <script lang='ts'>
-  import { Check, Zap, Clock, Shield, Globe } from '@lucide/svelte';
+  import { Check, Clock, Globe, Shield, Zap } from '@lucide/svelte'
 </script>
 
 <section id='pricing' class='py-24 bg-base-100 relative overflow-hidden'>
@@ -19,7 +19,7 @@
 
     <!-- Pricing Cards -->
     <div class='grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch items-center'>
-      
+
       <!-- Starter -->
       <div class='card bg-base-200/50 backdrop-blur-xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-base-content/5 h-full'>
         <div class='card-body p-8'>
@@ -69,8 +69,8 @@
         <div class='card-body p-10'>
           <div class='mb-6'>
             <div class='flex items-center gap-2 mb-2'>
-                <Zap class='w-6 h-6 fill-current text-accent' />
-                <h3 class='text-2xl font-black'>Profesyonel</h3>
+              <Zap class='w-6 h-6 fill-current text-accent' />
+              <h3 class='text-2xl font-black'>Profesyonel</h3>
             </div>
             <p class='text-primary-content/80 text-sm italic font-semibold'>Anılarını ölümsüzleştirmek ve paylaşmak isteyenler için</p>
           </div>

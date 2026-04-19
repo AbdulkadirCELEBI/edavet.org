@@ -1,5 +1,5 @@
 <script lang='ts'>
-  import { Mountain, MapPin, Users, Calendar, Compass, Camera, ChevronRight, Sparkles, Tent } from '@lucide/svelte'
+  import { Calendar, Camera, ChevronRight, Compass, Mountain, Sparkles, Tent, Users } from '@lucide/svelte'
 
   const features = [
     { icon: Mountain, title: 'Rota Planlama', desc: 'Gezinizin tüm duraklarını harita üzerinde görsel olarak planlayın.' },
@@ -25,7 +25,7 @@
 
 <!-- Hero - Doğa / Macera Teması -->
 <section class='relative min-h-[90vh] flex items-center overflow-hidden'>
-  <div class='absolute inset-0 bg-gradient-to-br from-emerald-50 via-teal-50 to-sky-50 dark:from-base-300 dark:via-base-200 dark:to-base-300'></div>
+  <div class='absolute inset-0 bg-linear-to-br from-emerald-50 via-teal-50 to-sky-50 dark:from-base-300 dark:via-base-200 dark:to-base-300'></div>
   <div class='absolute inset-0 z-0'>
     <div class='absolute top-[-10%] left-[-5%] w-[35%] h-[45%] bg-emerald-200/30 dark:bg-emerald-900/10 rounded-full blur-3xl'></div>
     <div class='absolute bottom-[-10%] right-[-5%] w-[35%] h-[45%] bg-teal-200/30 dark:bg-teal-900/10 rounded-full blur-3xl'></div>
@@ -48,7 +48,7 @@
       <h1 class='text-5xl md:text-7xl font-black mb-6 tracking-tight leading-[1.1]'>
         Macera Seni
         <br />
-        <span class='bg-gradient-to-r from-emerald-500 via-teal-500 to-sky-500 bg-clip-text text-transparent italic'>
+        <span class='bg-linear-to-r from-emerald-500 via-teal-500 to-sky-500 bg-clip-text text-transparent italic'>
           Bekliyor! 🌍
         </span>
       </h1>
@@ -58,7 +58,7 @@
       </p>
 
       <div class='flex flex-col sm:flex-row gap-4 justify-center'>
-        <a href='/order' class='btn btn-lg bg-gradient-to-r from-emerald-500 to-teal-500 border-0 text-white shadow-xl shadow-emerald-500/25 hover:shadow-emerald-500/40 hover:scale-105 transition-all px-10'>
+        <a href='/order' class='btn btn-lg bg-linear-to-r from-emerald-500 to-teal-500 border-0 text-white shadow-xl shadow-emerald-500/25 hover:shadow-emerald-500/40 hover:scale-105 transition-all px-10'>
           <Sparkles class='w-5 h-5' />
           Gezi Davetiyeni Oluştur
         </a>
@@ -114,7 +114,7 @@
 </section>
 
 <!-- CTA -->
-<section class='py-24 bg-gradient-to-r from-emerald-500 via-teal-500 to-sky-500 text-white relative overflow-hidden'>
+<section class='py-24 bg-linear-to-r from-emerald-500 via-teal-500 to-sky-500 text-white relative overflow-hidden'>
   <div class='absolute inset-0'>
     <div class='absolute top-[-20%] left-[10%] w-[30%] h-[60%] bg-white/5 rounded-full blur-3xl'></div>
   </div>

@@ -1,5 +1,5 @@
 <script lang='ts'>
-  import { Crown, Camera, MapPin, Music, Users, Star, ChevronRight, Sparkles, Clock } from '@lucide/svelte'
+  import { Camera, ChevronRight, Clock, Crown, MapPin, Music, Sparkles, Users } from '@lucide/svelte'
 
   const features = [
     { icon: Crown, title: 'Şehzade Temalı Tasarım', desc: 'Geleneksel motifler ve modern çizgilerle oğlunuz için kraliyet temalı davetiyeler.' },
@@ -18,7 +18,7 @@
 
 <!-- Hero - Geleneksel & Modern -->
 <section class='relative min-h-[90vh] flex items-center overflow-hidden'>
-  <div class='absolute inset-0 bg-gradient-to-br from-blue-50 via-sky-50 to-amber-50 dark:from-base-300 dark:via-base-200 dark:to-base-300'></div>
+  <div class='absolute inset-0 bg-linear-to-br from-blue-50 via-sky-50 to-amber-50 dark:from-base-300 dark:via-base-200 dark:to-base-300'></div>
   <div class='absolute inset-0 z-0'>
     <div class='absolute top-[-10%] left-[-5%] w-[35%] h-[45%] bg-blue-200/30 dark:bg-blue-900/10 rounded-full blur-3xl'></div>
     <div class='absolute bottom-[-10%] right-[-5%] w-[35%] h-[45%] bg-amber-200/30 dark:bg-amber-900/10 rounded-full blur-3xl'></div>
@@ -41,7 +41,7 @@
       <h1 class='text-5xl md:text-7xl font-black mb-6 tracking-tight leading-[1.1]'>
         Küçük Şehzadenizin
         <br />
-        <span class='bg-gradient-to-r from-blue-500 via-sky-500 to-amber-500 bg-clip-text text-transparent italic'>
+        <span class='bg-linear-to-r from-blue-500 via-sky-500 to-amber-500 bg-clip-text text-transparent italic'>
           Büyük Günü 👑
         </span>
       </h1>
@@ -51,7 +51,7 @@
       </p>
 
       <div class='flex flex-col sm:flex-row gap-4 justify-center'>
-        <a href='/order' class='btn btn-lg bg-gradient-to-r from-blue-500 to-sky-500 border-0 text-white shadow-xl shadow-blue-500/25 hover:shadow-blue-500/40 hover:scale-105 transition-all px-10'>
+        <a href='/order' class='btn btn-lg bg-linear-to-r from-blue-500 to-sky-500 border-0 text-white shadow-xl shadow-blue-500/25 hover:shadow-blue-500/40 hover:scale-105 transition-all px-10'>
           <Sparkles class='w-5 h-5' />
           Sünnet Davetiyeni Yap
         </a>
@@ -71,8 +71,8 @@
       <h2 class='text-4xl md:text-5xl font-black mb-4 tracking-tight'>Kraliyet Düzeyinde <span class='text-blue-500'>Davetiye</span></h2>
     </div>
     <div class='max-w-lg mx-auto'>
-      <div class='card bg-gradient-to-b from-blue-50 to-amber-50 dark:from-base-200 dark:to-base-300 shadow-2xl border border-blue-100 dark:border-base-content/10 overflow-hidden'>
-        <div class='h-2 bg-gradient-to-r from-blue-400 via-sky-400 to-amber-400'></div>
+      <div class='card bg-linear-to-b from-blue-50 to-amber-50 dark:from-base-200 dark:to-base-300 shadow-2xl border border-blue-100 dark:border-base-content/10 overflow-hidden'>
+        <div class='h-2 bg-linear-to-r from-blue-400 via-sky-400 to-amber-400'></div>
         <div class='card-body items-center text-center p-10'>
           <div class='text-6xl mb-2'>👑</div>
           <p class='text-blue-500 font-semibold tracking-widest text-sm uppercase'>Sünnet Merasimimize Davetlisiniz</p>
@@ -122,7 +122,7 @@
 </section>
 
 <!-- CTA -->
-<section class='py-24 bg-gradient-to-r from-blue-500 via-sky-500 to-amber-500 text-white relative overflow-hidden'>
+<section class='py-24 bg-linear-to-r from-blue-500 via-sky-500 to-amber-500 text-white relative overflow-hidden'>
   <div class='absolute inset-0'>
     <div class='absolute top-[-20%] left-[10%] w-[30%] h-[60%] bg-white/5 rounded-full blur-3xl'></div>
   </div>

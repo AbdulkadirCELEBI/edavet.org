@@ -1,5 +1,5 @@
 <script lang='ts'>
-  import { Scissors, MapPin, Camera, Clock, Users, Award, Store, ChevronRight, Sparkles } from '@lucide/svelte'
+  import { Award, Camera, ChevronRight, Clock, MapPin, Scissors, Sparkles, Store, Users } from '@lucide/svelte'
 
   const features = [
     { icon: Scissors, title: 'Kurdele Kesme Animasyonu', desc: 'Davetiye açılışında göz alıcı bir kurdele kesme animasyonu ile başlayın.' },
@@ -25,7 +25,7 @@
 
 <!-- Hero -->
 <section class='relative min-h-[90vh] flex items-center overflow-hidden'>
-  <div class='absolute inset-0 bg-gradient-to-br from-orange-50 via-red-50 to-amber-50 dark:from-base-300 dark:via-base-200 dark:to-base-300'></div>
+  <div class='absolute inset-0 bg-linear-to-br from-orange-50 via-red-50 to-amber-50 dark:from-base-300 dark:via-base-200 dark:to-base-300'></div>
   <div class='absolute inset-0 z-0'>
     <div class='absolute top-[-10%] left-[-5%] w-[35%] h-[45%] bg-orange-200/30 dark:bg-orange-900/10 rounded-full blur-3xl'></div>
     <div class='absolute bottom-[-10%] right-[-5%] w-[35%] h-[45%] bg-red-200/30 dark:bg-red-900/10 rounded-full blur-3xl'></div>
@@ -48,7 +48,7 @@
       <h1 class='text-5xl md:text-7xl font-black mb-6 tracking-tight leading-[1.1]'>
         Yeni Başlangıcınızı
         <br />
-        <span class='bg-gradient-to-r from-orange-500 via-red-500 to-amber-500 bg-clip-text text-transparent italic'>
+        <span class='bg-linear-to-r from-orange-500 via-red-500 to-amber-500 bg-clip-text text-transparent italic'>
           Kutlayın! ✂️
         </span>
       </h1>
@@ -58,7 +58,7 @@
       </p>
 
       <div class='flex flex-col sm:flex-row gap-4 justify-center'>
-        <a href='/order' class='btn btn-lg bg-gradient-to-r from-orange-500 to-red-500 border-0 text-white shadow-xl shadow-orange-500/25 hover:shadow-orange-500/40 hover:scale-105 transition-all px-10'>
+        <a href='/order' class='btn btn-lg bg-linear-to-r from-orange-500 to-red-500 border-0 text-white shadow-xl shadow-orange-500/25 hover:shadow-orange-500/40 hover:scale-105 transition-all px-10'>
           <Sparkles class='w-5 h-5' />
           Açılış Davetiyeni Yap
         </a>
@@ -113,7 +113,7 @@
 </section>
 
 <!-- CTA -->
-<section class='py-24 bg-gradient-to-r from-orange-500 via-red-500 to-amber-500 text-white relative overflow-hidden'>
+<section class='py-24 bg-linear-to-r from-orange-500 via-red-500 to-amber-500 text-white relative overflow-hidden'>
   <div class='absolute inset-0'>
     <div class='absolute top-[-20%] left-[10%] w-[30%] h-[60%] bg-white/5 rounded-full blur-3xl'></div>
   </div>

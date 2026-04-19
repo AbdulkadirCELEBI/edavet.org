@@ -19,10 +19,10 @@
       { href: '#team', label: 'Ekibimiz' },
     ],
     yasal: [
-      { href: '#', label: 'Gizlilik Politikası' },
-      { href: '#', label: 'Kullanım Koşulları' },
-      { href: '#', label: 'KVKK Aydınlatma' },
-      { href: '#', label: 'Çerez Politikası' },
+      { href: '/', label: 'Gizlilik Politikası' },
+      { href: '/', label: 'Kullanım Koşulları' },
+      { href: '/', label: 'KVKK Aydınlatma' },
+      { href: '/', label: 'Çerez Politikası' },
     ],
   }
 </script>
@@ -34,16 +34,16 @@
       <!-- Marka -->
       <div class='lg:col-span-1'>
         <a href='/' class='inline-block mb-4 outline-none'>
-          <Logo class="scale-90 origin-left" />
+          <Logo class='scale-90 origin-left' />
         </a>
         <p class='text-base-content/60 text-sm font-medium leading-relaxed mb-6'>
           Her anınız için mükemmel dijital davetiyeler. Modern, şık ve kolay kullanımlı davetiye platformu.
         </p>
         <!-- Sosyal Medya -->
         <div class='flex gap-2'>
-          <a href='#' class='btn btn-ghost btn-sm btn-circle hover:bg-primary/10 hover:text-primary' aria-label='Instagram'>📸</a>
-          <a href='#' class='btn btn-ghost btn-sm btn-circle hover:bg-primary/10 hover:text-primary' aria-label='Twitter'>🐦</a>
-          <a href='#' class='btn btn-ghost btn-sm btn-circle hover:bg-primary/10 hover:text-primary' aria-label='YouTube'>▶️</a>
+          <a href='/' class='btn btn-ghost btn-sm btn-circle hover:bg-primary/10 hover:text-primary' aria-label='Instagram'>📸</a>
+          <a href='/' class='btn btn-ghost btn-sm btn-circle hover:bg-primary/10 hover:text-primary' aria-label='Twitter'>🐦</a>
+          <a href='/' class='btn btn-ghost btn-sm btn-circle hover:bg-primary/10 hover:text-primary' aria-label='YouTube'>▶️</a>
         </div>
       </div>
 

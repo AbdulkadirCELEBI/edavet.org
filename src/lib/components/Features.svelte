@@ -1,5 +1,5 @@
 <script lang='ts'>
-  import { Palette, Share2, Users, Camera, MapPin, Music } from '@lucide/svelte'
+  import { Camera, MapPin, Music, Palette, Share2, Users } from '@lucide/svelte'
 
   const features = [
     {
@@ -58,7 +58,7 @@
         Anılarınızı <span class='bg-linear-to-r from-amber-500 to-amber-700 bg-clip-text text-transparent'>Sanata</span> Dönüştüren Dokunuşlar
       </h2>
       <p class='text-base-content/70 max-w-2xl mx-auto text-lg font-medium leading-relaxed'>
-        Size özel detayları estetik birer sanat eserine dönüştürerek, misafirleriniz için 
+        Size özel detayları estetik birer sanat eserine dönüştürerek, misafirleriniz için
         unutulmaz ve prestij dolu bir ilk imza sunuyoruz.
       </p>
     </div>

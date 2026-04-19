@@ -1,5 +1,5 @@
 <script lang='ts'>
-  import { Baby, Heart, Camera, Gift, Star, Users, CloudRain, ChevronRight, Sparkles } from '@lucide/svelte'
+  import { Baby, Camera, ChevronRight, Gift, Heart, Sparkles, Star, Users } from '@lucide/svelte'
 
   const features = [
     { icon: Baby, title: 'Bebek Temalı Tasarımlar', desc: 'Erkek ve kız bebek için özel renk paletleri ve sevimli illüstrasyonlar.' },
@@ -18,7 +18,7 @@
 
 <!-- Hero - Tatlı, Pastel Tema -->
 <section class='relative min-h-[90vh] flex items-center overflow-hidden'>
-  <div class='absolute inset-0 bg-gradient-to-br from-sky-50 via-pink-50 to-yellow-50 dark:from-base-300 dark:via-base-200 dark:to-base-300'></div>
+  <div class='absolute inset-0 bg-linear-to-br from-sky-50 via-pink-50 to-yellow-50 dark:from-base-300 dark:via-base-200 dark:to-base-300'></div>
   <div class='absolute inset-0 z-0'>
     <div class='absolute top-[-10%] left-[-5%] w-[35%] h-[45%] bg-sky-200/40 dark:bg-sky-900/10 rounded-full blur-3xl'></div>
     <div class='absolute bottom-[-10%] right-[-5%] w-[35%] h-[45%] bg-pink-200/40 dark:bg-pink-900/10 rounded-full blur-3xl'></div>
@@ -41,7 +41,7 @@
       <h1 class='text-5xl md:text-7xl font-black mb-6 tracking-tight leading-[1.1]'>
         Minik Mucize
         <br />
-        <span class='bg-gradient-to-r from-sky-400 via-pink-400 to-yellow-400 bg-clip-text text-transparent italic'>
+        <span class='bg-linear-to-r from-sky-400 via-pink-400 to-yellow-400 bg-clip-text text-transparent italic'>
           Yolda! 👶
         </span>
       </h1>
@@ -51,7 +51,7 @@
       </p>
 
       <div class='flex flex-col sm:flex-row gap-4 justify-center'>
-        <a href='/order' class='btn btn-lg bg-gradient-to-r from-sky-400 to-pink-400 border-0 text-white shadow-xl shadow-sky-500/25 hover:shadow-sky-500/40 hover:scale-105 transition-all px-10'>
+        <a href='/order' class='btn btn-lg bg-linear-to-r from-sky-400 to-pink-400 border-0 text-white shadow-xl shadow-sky-500/25 hover:shadow-sky-500/40 hover:scale-105 transition-all px-10'>
           <Sparkles class='w-5 h-5' />
           Baby Shower Davetiyesi Yap
         </a>
@@ -71,8 +71,8 @@
       <h2 class='text-4xl md:text-5xl font-black mb-4 tracking-tight'>Tatlı Bir <span class='text-sky-500'>Davetiye</span></h2>
     </div>
     <div class='max-w-lg mx-auto'>
-      <div class='card bg-gradient-to-b from-sky-50 to-pink-50 dark:from-base-200 dark:to-base-300 shadow-2xl border border-sky-100 dark:border-base-content/10 overflow-hidden'>
-        <div class='h-2 bg-gradient-to-r from-sky-300 via-pink-300 to-yellow-300'></div>
+      <div class='card bg-linear-to-b from-sky-50 to-pink-50 dark:from-base-200 dark:to-base-300 shadow-2xl border border-sky-100 dark:border-base-content/10 overflow-hidden'>
+        <div class='h-2 bg-linear-to-r from-sky-300 via-pink-300 to-yellow-300'></div>
         <div class='card-body items-center text-center p-10'>
           <div class='text-6xl mb-2'>🧸</div>
           <p class='text-sky-500 font-semibold tracking-widest text-sm uppercase'>Baby Shower'ımıza Davetlisiniz!</p>
@@ -117,7 +117,7 @@
 </section>
 
 <!-- CTA -->
-<section class='py-24 bg-gradient-to-r from-sky-400 via-pink-400 to-yellow-400 text-white relative overflow-hidden'>
+<section class='py-24 bg-linear-to-r from-sky-400 via-pink-400 to-yellow-400 text-white relative overflow-hidden'>
   <div class='absolute inset-0'>
     <div class='absolute top-[-20%] left-[10%] w-[30%] h-[60%] bg-white/5 rounded-full blur-3xl'></div>
   </div>

@@ -1,5 +1,5 @@
 <script lang='ts'>
-  import { Gem, Wand, Camera, MapPin, Users, Palette, Clock, ChevronRight, Sparkles } from '@lucide/svelte'
+  import { Camera, ChevronRight, Clock, Gem, MapPin, Palette, Sparkles, Users, Wand } from '@lucide/svelte'
 
   const features = [
     { icon: Wand, title: 'Sıfırdan Tasarım', desc: 'Tamamen özgün bir davetiye oluşturmak için sınırsız kişiselleştirme.' },
@@ -27,7 +27,7 @@
 
 <!-- Hero - Lüks & Elegant -->
 <section class='relative min-h-[90vh] flex items-center overflow-hidden'>
-  <div class='absolute inset-0 bg-gradient-to-br from-violet-50 via-fuchsia-50 to-rose-50 dark:from-base-300 dark:via-base-200 dark:to-base-300'></div>
+  <div class='absolute inset-0 bg-linear-to-br from-violet-50 via-fuchsia-50 to-rose-50 dark:from-base-300 dark:via-base-200 dark:to-base-300'></div>
   <div class='absolute inset-0 z-0'>
     <div class='absolute top-[-10%] left-[-5%] w-[35%] h-[45%] bg-violet-200/30 dark:bg-violet-900/10 rounded-full blur-3xl'></div>
     <div class='absolute bottom-[-10%] right-[-5%] w-[35%] h-[45%] bg-fuchsia-200/30 dark:bg-fuchsia-900/10 rounded-full blur-3xl'></div>
@@ -50,7 +50,7 @@
       <h1 class='text-5xl md:text-7xl font-black mb-6 tracking-tight leading-[1.1]'>
         Her An
         <br />
-        <span class='bg-gradient-to-r from-violet-500 via-fuchsia-500 to-rose-500 bg-clip-text text-transparent italic'>
+        <span class='bg-linear-to-r from-violet-500 via-fuchsia-500 to-rose-500 bg-clip-text text-transparent italic'>
           Özel Olabilir ✨
         </span>
       </h1>
@@ -60,7 +60,7 @@
       </p>
 
       <div class='flex flex-col sm:flex-row gap-4 justify-center'>
-        <a href='/order' class='btn btn-lg bg-gradient-to-r from-violet-500 to-fuchsia-500 border-0 text-white shadow-xl shadow-violet-500/25 hover:shadow-violet-500/40 hover:scale-105 transition-all px-10'>
+        <a href='/order' class='btn btn-lg bg-linear-to-r from-violet-500 to-fuchsia-500 border-0 text-white shadow-xl shadow-violet-500/25 hover:shadow-violet-500/40 hover:scale-105 transition-all px-10'>
           <Sparkles class='w-5 h-5' />
           Özel Davetiyeni Yap
         </a>
@@ -115,7 +115,7 @@
 </section>
 
 <!-- CTA -->
-<section class='py-24 bg-gradient-to-r from-violet-500 via-fuchsia-500 to-rose-500 text-white relative overflow-hidden'>
+<section class='py-24 bg-linear-to-r from-violet-500 via-fuchsia-500 to-rose-500 text-white relative overflow-hidden'>
   <div class='absolute inset-0'>
     <div class='absolute top-[-20%] left-[10%] w-[30%] h-[60%] bg-white/5 rounded-full blur-3xl'></div>
   </div>

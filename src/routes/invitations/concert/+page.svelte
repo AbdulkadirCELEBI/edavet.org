@@ -1,5 +1,5 @@
 <script lang='ts'>
-  import { Music, Mic, Ticket, MapPin, Clock, Volume2, Radio, ChevronRight, Zap } from '@lucide/svelte'
+  import { ChevronRight, Clock, MapPin, Mic, Music, Radio, Ticket, Volume2, Zap } from '@lucide/svelte'
 
   const features = [
     { icon: Music, title: 'Müzik Entegrasyonu', desc: 'Sanatçının hit şarkısını doğrudan davetiye arka planında çalın.' },
@@ -31,7 +31,7 @@
     <div class='absolute top-[50%] left-[50%] w-[20%] h-[20%] bg-cyan-500/10 rounded-full blur-[80px]'></div>
   </div>
   <!-- Equalizer Line -->
-  <div class='absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-500 z-0'></div>
+  <div class='absolute bottom-0 left-0 right-0 h-1 bg-linear-to-r from-purple-500 via-pink-500 to-cyan-500 z-0'></div>
 
   <div class='container mx-auto px-4 relative z-10 py-20'>
     <div class='max-w-4xl mx-auto text-center'>
@@ -43,7 +43,7 @@
       <h1 class='text-5xl md:text-7xl font-black mb-6 tracking-tight leading-[1.1] text-white'>
         Sahneyi
         <br />
-        <span class='bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent italic'>
+        <span class='bg-linear-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent italic'>
           Siz Kurun 🎶
         </span>
       </h1>
@@ -53,7 +53,7 @@
       </p>
 
       <div class='flex flex-col sm:flex-row gap-4 justify-center'>
-        <a href='/order' class='btn btn-lg bg-gradient-to-r from-purple-500 to-pink-500 border-0 text-white shadow-xl shadow-purple-500/25 hover:shadow-purple-500/40 hover:scale-105 transition-all px-10'>
+        <a href='/order' class='btn btn-lg bg-linear-to-r from-purple-500 to-pink-500 border-0 text-white shadow-xl shadow-purple-500/25 hover:shadow-purple-500/40 hover:scale-105 transition-all px-10'>
           <Zap class='w-5 h-5' />
           Konser Davetiyeni Yap
         </a>
@@ -73,8 +73,8 @@
       <h2 class='text-4xl md:text-5xl font-black mb-4 tracking-tight text-white'>Davetiyeniz Böyle <span class='text-purple-400'>Çalacak</span></h2>
     </div>
     <div class='max-w-lg mx-auto'>
-      <div class='card bg-gradient-to-b from-gray-900 to-[#0a0a12] shadow-2xl border border-purple-500/20 overflow-hidden'>
-        <div class='h-1 bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-500'></div>
+      <div class='card bg-linear-to-b from-gray-900 to-[#0a0a12] shadow-2xl border border-purple-500/20 overflow-hidden'>
+        <div class='h-1 bg-linear-to-r from-purple-500 via-pink-500 to-cyan-500'></div>
         <div class='card-body items-center text-center p-10'>
           <div class='text-6xl mb-2'>🎤</div>
           <p class='text-purple-400 font-semibold tracking-widest text-xs uppercase'>Canlı Konser</p>
@@ -116,7 +116,7 @@
         <div class='card bg-white/[0.03] border border-white/10 hover:border-purple-500/30 transition-all group hover:-translate-y-2 cursor-pointer'>
           <div class='card-body items-center text-center p-8'>
             <div class='text-5xl mb-3 group-hover:scale-125 transition-transform'>{g.emoji}</div>
-            <div class='badge bg-gradient-to-r {g.color} text-white border-0 font-bold py-3 px-4'>{g.label}</div>
+            <div class='badge bg-linear-to-r {g.color} text-white border-0 font-bold py-3 px-4'>{g.label}</div>
           </div>
         </div>
       {/each}
@@ -147,7 +147,7 @@
 </section>
 
 <!-- CTA -->
-<section class='py-24 bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 text-white relative overflow-hidden'>
+<section class='py-24 bg-linear-to-r from-purple-600 via-pink-600 to-cyan-600 text-white relative overflow-hidden'>
   <div class='absolute inset-0'>
     <div class='absolute top-[-20%] left-[10%] w-[30%] h-[60%] bg-white/5 rounded-full blur-3xl'></div>
   </div>

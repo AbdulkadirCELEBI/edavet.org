@@ -1,5 +1,5 @@
 <script lang='ts'>
-  import { Mail, Phone, MapPin, Send, Clock } from '@lucide/svelte'
+  import { Clock, Mail, MapPin, Phone, Send } from '@lucide/svelte'
 
   const contactInfo = [
     {
@@ -73,13 +73,13 @@
         <div class='pt-6 border-t border-base-content/10'>
           <div class='font-bold text-sm text-base-content/50 uppercase tracking-wider mb-4'>Sosyal Medya</div>
           <div class='flex gap-3'>
-            <a href='#' class='btn btn-circle btn-sm btn-ghost bg-base-100 hover:bg-primary hover:text-primary-content transition-all shadow-sm' aria-label='Instagram'>
+            <a href='/' class='btn btn-circle btn-sm btn-ghost bg-base-100 hover:bg-primary hover:text-primary-content transition-all shadow-sm' aria-label='Instagram'>
               📸
             </a>
-            <a href='#' class='btn btn-circle btn-sm btn-ghost bg-base-100 hover:bg-primary hover:text-primary-content transition-all shadow-sm' aria-label='Twitter'>
+            <a href='/' class='btn btn-circle btn-sm btn-ghost bg-base-100 hover:bg-primary hover:text-primary-content transition-all shadow-sm' aria-label='Twitter'>
               🐦
             </a>
-            <a href='#' class='btn btn-circle btn-sm btn-ghost bg-base-100 hover:bg-primary hover:text-primary-content transition-all shadow-sm' aria-label='YouTube'>
+            <a href='/' class='btn btn-circle btn-sm btn-ghost bg-base-100 hover:bg-primary hover:text-primary-content transition-all shadow-sm' aria-label='YouTube'>
               ▶️
             </a>
           </div>
