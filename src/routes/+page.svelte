@@ -1,27 +1,11 @@
 <script lang='ts'>
   import {
-    Categories,
     Contact,
-    CTA,
-    FAQ,
-    Features,
+    EventTypes,
     Hero,
-    HowItWorks,
-    Pricing,
-    Stats,
-    Team,
-    Testimonials,
   } from '$lib/components'
 </script>
 
 <Hero />
-<Categories />
-<HowItWorks />
-<Features />
-<Stats />
-<Pricing />
-<Testimonials />
-<Team />
-<FAQ />
-<CTA />
+<EventTypes />
 <Contact />

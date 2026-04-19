@@ -4,8 +4,51 @@
   themes: all;
 }
 
-@layer base {
-  html {
-    scroll-behavior: smooth;
+/* Edavet Premium Theme - Light Mode Overrides (Retro) */
+[data-theme='retro'] {
+  --color-base-100: #fafaf9;
+  --color-base-200: #f3eeea;
+  --color-base-300: #e6dfd6;
+  --color-base-content: #3a2a22;
+  --color-primary: #b37c63;
+  --color-primary-content: #ffffff;
+  --color-secondary: #d2a878;
+  --color-secondary-content: #ffffff;
+  --color-accent: #ce9292;
+  --color-accent-content: #ffffff;
+  --color-neutral: #3a2a22;
+  --color-neutral-content: #ffffff;
+
+  --radius-box: 1.5rem;
+  --animation-btn: 0.3s;
+}
+
+:root {
+  --hero-blend: multiply;
+  --hero-opacity: 0.4;
+}
+
+[data-theme='dark'] {
+  --hero-blend: soft-light;
+  --hero-opacity: 0.15;
+}
+
+/* Add some premium visual utilities */
+@layer utilities {
+  .premium-glow {
+    box-shadow: 0 10px 40px -10px var(--color-primary);
   }
+  .premium-glass {
+    background: color-mix(in srgb, var(--color-base-100) 70%, transparent);
+    backdrop-filter: blur(16px);
+    border: 1px solid color-mix(in srgb, var(--color-base-content) 10%, transparent);
+  }
+  .premium-text-glow {
+    text-shadow: 0 0 30px color-mix(in srgb, var(--color-primary) 40%, transparent);
+  }
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  letter-spacing: -0.01em;
 }
