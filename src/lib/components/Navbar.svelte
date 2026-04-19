@@ -1,5 +1,6 @@
 <script lang='ts'>
   import { page } from '$app/stores'
+  import { theme, toggleTheme } from '$lib/theme.svelte'
   import { ChevronDown, Globe, Menu, Moon, Sun } from '@lucide/svelte'
   import Logo from './Logo.svelte'
 
@@ -122,7 +123,11 @@
 
     <!-- Tema Değiştirici -->
     <label class='swap swap-rotate btn btn-ghost btn-sm btn-circle ml-1'>
-      <input type='checkbox' class='theme-controller' value='dark' />
+      <input type='checkbox'
+             class='theme-controller'
+             value='dark'
+             checked={theme.current === 'dark'}
+             onchange={toggleTheme} />
       <Sun class='swap-on w-5 h-5' />
       <Moon class='swap-off w-5 h-5' />
     </label>

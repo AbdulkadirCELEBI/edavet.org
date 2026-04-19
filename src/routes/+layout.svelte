@@ -2,6 +2,7 @@
   import { loadCart } from '$lib/cart.svelte'
   import { Footer, Navbar } from '$lib/components'
   import MobileDrawer from '$lib/components/MobileDrawer.svelte'
+  import { initTheme } from '$lib/theme.svelte'
   import { onMount } from 'svelte'
   import { Toaster } from 'svelte-sonner'
   import './layout.css'
@@ -9,6 +10,7 @@
   const { children } = $props()
 
   onMount(() => {
+    initTheme()
     loadCart()
   })
 </script>
