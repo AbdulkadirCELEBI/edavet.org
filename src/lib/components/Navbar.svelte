@@ -15,8 +15,22 @@
     User,
   } from '@lucide/svelte'
   import { toast } from 'svelte-sonner'
+  import { onMount } from 'svelte'
 
   const session = $derived($page.data.session)
+
+  let theme = $state('retro')
+
+  onMount(() => {
+    theme = localStorage.getItem('theme') || 'retro'
+    document.documentElement.setAttribute('data-theme', theme)
+  })
+
+  function toggleTheme() {
+    theme = theme === 'retro' ? 'dark' : 'retro'
+    localStorage.setItem('theme', theme)
+    document.documentElement.setAttribute('data-theme', theme)
+  }
 
   const invitationLinks = [
     { href: '/invitations/wedding', label: 'Düğün-Nikah Davetiyesi' },
@@ -211,7 +225,7 @@
 
     <!-- Tema Değiştirici -->
     <label class='swap swap-rotate btn btn-ghost btn-sm btn-circle mr-1'>
-      <input type='checkbox' class='theme-controller' value='dark' />
+      <input type='checkbox' checked={theme === 'dark'} onchange={toggleTheme} />
       <Sun class='swap-on w-5 h-5' />
       <Moon class='swap-off w-5 h-5' />
     </label>

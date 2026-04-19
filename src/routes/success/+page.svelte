@@ -1,12 +1,16 @@
 <script lang='ts'>
-  import { cart } from '$lib/cart.svelte' // Assuming you have a reset function or can clear items
+  import { clearCartLocal } from '$lib/cart.svelte'
   import { CheckCircle } from '@lucide/svelte'
   import { onMount } from 'svelte'
 
-  onMount(() => {
-    // Optional: Clear cart after successful payment if it was an order
-    if (cart && cart.items) {
-      cart.items = [] // Or call your clearCart() function
+  onMount(async () => {
+    // Clear local cart state
+    clearCartLocal()
+    // Also clear server-side cart session
+    try {
+      await fetch('/api/cart', { method: 'DELETE', body: JSON.stringify({ clearAll: true }), headers: { 'Content-Type': 'application/json' } })
+    } catch (e) {
+      console.error('Cart clear failed', e)
     }
   })
 </script>
