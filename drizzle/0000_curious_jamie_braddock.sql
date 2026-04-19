@@ -1,3 +1,15 @@
+CREATE TABLE `user` (
+	`id` text PRIMARY KEY NOT NULL,
+	`name` text NOT NULL,
+	`email` text NOT NULL,
+	`email_verified` integer NOT NULL,
+	`image` text,
+	`created_at` integer NOT NULL,
+	`updated_at` integer NOT NULL
+);
+--> statement-breakpoint
+CREATE UNIQUE INDEX `user_email_unique` ON `user` (`email`);
+--> statement-breakpoint
 CREATE TABLE `account` (
 	`id` text PRIMARY KEY NOT NULL,
 	`account_id` text NOT NULL,
@@ -43,7 +55,8 @@ CREATE TABLE `invitation` (
 	FOREIGN KEY (`user_id`) REFERENCES `user`(`id`) ON UPDATE no action ON DELETE cascade
 );
 --> statement-breakpoint
-CREATE UNIQUE INDEX `invitation_slug_unique` ON `invitation` (`slug`);--> statement-breakpoint
+CREATE UNIQUE INDEX `invitation_slug_unique` ON `invitation` (`slug`);
+--> statement-breakpoint
 CREATE TABLE `session` (
 	`id` text PRIMARY KEY NOT NULL,
 	`expires_at` integer NOT NULL,
@@ -56,24 +69,14 @@ CREATE TABLE `session` (
 	FOREIGN KEY (`user_id`) REFERENCES `user`(`id`) ON UPDATE no action ON DELETE no action
 );
 --> statement-breakpoint
-CREATE UNIQUE INDEX `session_token_unique` ON `session` (`token`);--> statement-breakpoint
+CREATE UNIQUE INDEX `session_token_unique` ON `session` (`token`);
+--> statement-breakpoint
 CREATE TABLE `task` (
 	`id` text PRIMARY KEY NOT NULL,
 	`title` text NOT NULL,
 	`priority` integer DEFAULT 1 NOT NULL
 );
 --> statement-breakpoint
-CREATE TABLE `user` (
-	`id` text PRIMARY KEY NOT NULL,
-	`name` text NOT NULL,
-	`email` text NOT NULL,
-	`email_verified` integer NOT NULL,
-	`image` text,
-	`created_at` integer NOT NULL,
-	`updated_at` integer NOT NULL
-);
---> statement-breakpoint
-CREATE UNIQUE INDEX `user_email_unique` ON `user` (`email`);--> statement-breakpoint
 CREATE TABLE `verification` (
 	`id` text PRIMARY KEY NOT NULL,
 	`identifier` text NOT NULL,
