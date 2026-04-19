@@ -1,5 +1,6 @@
 <script lang='ts'>
   import { MailOpen } from '@lucide/svelte'
+  import Logo from './Logo.svelte'
 
   const invitationLinks = [
     { href: '/invitations/wedding', label: 'Düğün-Nikah Davetiyesi' },
@@ -20,13 +21,8 @@
   <ul class='menu bg-base-200 min-h-full w-80 p-4 pt-8 gap-1'>
     <!-- Logo -->
     <li class='mb-4'>
-      <a href='/' class='flex items-center gap-2'>
-        <div class='p-2 bg-primary/10 rounded-xl'>
-          <MailOpen class='w-6 h-6 text-primary' />
-        </div>
-        <span class='text-xl font-bold tracking-tight bg-linear-to-r from-primary to-secondary bg-clip-text text-transparent'>
-          edavet.org
-        </span>
+      <a href='/' class='inline-block outline-none hover:bg-transparent'>
+        <Logo class="scale-90 origin-left" />
       </a>
     </li>
 
@@ -46,8 +42,8 @@
       </details>
     </li>
 
-    <li><a href='/pricing' class='font-semibold'>Ücretler</a></li>
-    <li><a href='/contact' class='font-semibold'>İletişim</a></li>
+    <li><a href='/#pricing' class='font-semibold'>Fiyatlandırma</a></li>
+    <li><a href='/#contact' class='font-semibold'>İletişim</a></li>
 
     <div class='divider my-1'></div>
 
