@@ -1,10 +1,19 @@
 <script lang='ts'>
+  import { loadCart } from '$lib/cart.svelte'
   import { Footer, Navbar } from '$lib/components'
   import MobileDrawer from '$lib/components/MobileDrawer.svelte'
+  import { onMount } from 'svelte'
+  import { Toaster } from 'svelte-sonner'
   import './layout.css'
 
   const { children } = $props()
+
+  onMount(() => {
+    loadCart()
+  })
 </script>
+
+<Toaster position='top-center' richColors />
 
 <svelte:head>
   <title>edavet.org</title>

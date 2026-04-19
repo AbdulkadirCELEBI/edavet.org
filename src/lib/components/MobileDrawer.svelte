@@ -1,5 +1,4 @@
 <script lang='ts'>
-  import { MailOpen } from '@lucide/svelte'
   import Logo from './Logo.svelte'
 
   const invitationLinks = [
@@ -13,6 +12,15 @@
     { href: '/invitations/concert', label: 'Konser Davetiyesi' },
     { href: '/invitations/special', label: 'Özel Davetler' },
   ]
+
+  const languages = [
+    { code: 'TR', country: 'tr', label: 'Türkçe' },
+    { code: 'EN', country: 'gb', label: 'İngilizce' },
+    { code: 'RU', country: 'ru', label: 'Rusça' },
+    { code: 'AZ', country: 'az', label: 'Azerice' },
+    { code: 'DE', country: 'de', label: 'Almanca' },
+    { code: 'ES', country: 'es', label: 'İspanyolca' },
+  ]
 </script>
 
 <!-- Mobil Sidebar -->
@@ -22,7 +30,7 @@
     <!-- Logo -->
     <li class='mb-4'>
       <a href='/' class='inline-block outline-none hover:bg-transparent'>
-        <Logo class="scale-90 origin-left" />
+        <Logo class='scale-90 origin-left' />
       </a>
     </li>
 
@@ -49,8 +57,16 @@
 
     <!-- Dil Seçimi -->
     <li class='menu-title text-xs uppercase tracking-wider opacity-60'>Dil</li>
-    <li><button>Türkçe</button></li>
-    <li><button>Rusça</button></li>
-    <li><button>İngilizce</button></li>
+    {#each languages as lang}
+      <li>
+        <button class='flex items-center justify-start gap-4 py-3 active:bg-base-300'>
+          <div class='shrink-0 w-6 h-4 overflow-hidden rounded-[2px] shadow-sm border border-base-300'>
+            <img src={`https://flagcdn.com/${lang.country}.svg`} alt={`${lang.label} bayrağı`} class='w-full h-full object-cover' />
+          </div>
+          <span class='font-bold text-xs opacity-50 tracking-wider shrink-0 w-6 text-center'>{lang.code}</span>
+          <span class='font-medium grow w-full whitespace-nowrap'>{lang.label}</span>
+        </button>
+      </li>
+    {/each}
   </ul>
 </div>

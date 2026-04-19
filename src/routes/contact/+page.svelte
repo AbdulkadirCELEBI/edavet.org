@@ -1,4 +1,13 @@
-<div class='py-20 px-4 text-center'>
-  <h1 class='text-4xl font-bold mb-4'>İletişim</h1>
-  <p class='text-lg opacity-70'>Bizimle iletişime geçin.</p>
+<script lang='ts'>
+  import { Contact } from '$lib/components'
+  import { fade } from 'svelte/transition'
+</script>
+
+<svelte:head>
+  <title>İletişim | edavet.org</title>
+  <meta name='description' content='Soru, destek veya iş birliği için bizimle iletişime geçin. WhatsApp, Telegram ve E-posta ile yanınızdayız.' />
+</svelte:head>
+
+<div in:fade>
+  <Contact />
 </div>
