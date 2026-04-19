@@ -15,7 +15,7 @@
 
   const languages = [
     { code: 'TR', country: 'tr', label: 'Türkçe' },
-    { code: 'EN', country: 'gb', label: 'İngilizce' },
+    { code: 'GB', country: 'gb', label: 'İngilizce' },
     { code: 'RU', country: 'ru', label: 'Rusça' },
     { code: 'AZ', country: 'az', label: 'Azerice' },
     { code: 'DE', country: 'de', label: 'Almanca' },
