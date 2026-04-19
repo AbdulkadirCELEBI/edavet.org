@@ -14,8 +14,8 @@
     Sun,
     User,
   } from '@lucide/svelte'
-  import { toast } from 'svelte-sonner'
   import { onMount } from 'svelte'
+  import { toast } from 'svelte-sonner'
 
   const session = $derived($page.data.session)
 

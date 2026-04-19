@@ -9,7 +9,8 @@
     // Also clear server-side cart session
     try {
       await fetch('/api/cart', { method: 'DELETE', body: JSON.stringify({ clearAll: true }), headers: { 'Content-Type': 'application/json' } })
-    } catch (e) {
+    }
+    catch (e) {
       console.error('Cart clear failed', e)
     }
   })
